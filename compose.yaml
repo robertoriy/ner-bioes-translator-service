@@ -1,0 +1,12 @@
+services:
+  ner-bioes-translator-service:
+    build: .
+    container_name: ner-bioes-translator-service
+    ports:
+      - "8080:8080"
+    networks:
+      - ner-bioes-network
+
+networks:
+  ner-bioes-network:
+    driver: bridge
