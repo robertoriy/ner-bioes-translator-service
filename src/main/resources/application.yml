@@ -6,3 +6,16 @@ spring:
     name: ner-bioes-translator-service
   jackson:
     time-zone: UTC
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    path: /api-docs
+
+logging:
+  config: classpath:log4j2-plain.xml
